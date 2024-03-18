@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="BALL.png" />
+    <title>POKÉDEX</title>
+</head>
+
+<body>
+    <header>
+        <h1>POKÉDEX LIMITADA</h1>
+        <nav>
+            <a href="index.html">Evoluções</a>
+            <a href="poke1.html">Digite um Número</a>
+            <a href="poke2.html">Sorte Pokémon</a>
+        </nav>
+    </header>
+        
+    
+
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <div class="carousel">
+                    <div class="carousel-container">
+                        <div class="textbox">
+                        <div class="carousel-item">
+                            <img src="001.png" alt="BULBASAUR">  
+                            <h3>BULBASAUR</h3>
+                            <p>Tipo: Grama/Venenoso</p>
+                            <p>Evolui para: IVYSAUR</p>
+                        </div>
+                                
+                        <div class="carousel-item">
+                            <img src="002.png" alt="Imagem 2">
+                            <h3>IVYSAUR</h3>
+                                <p>Tipo: Grama/Venenoso</p>
+                                <p>Evolui para: VENUSAUR</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="003.png" alt="Imagem 3">
+                            <h3>VENUSAUR</h3>
+                                <p>Tipo: Grama/Venenoso</p>
+                                <p>Evolui de: IVYSAUR (Mega Venusaur)</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="004.png" alt="Imagem 4">
+                            <h3>CHARMANDER</h3>
+                                <p>Tipo: Fogo</p>
+                                <p>Evolui para: CHARMELEON</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="005.png" alt="Imagem 5">
+                            <h3>CHARMELEON</h3>
+                                <p>Tipo: Fogo</p>
+                                <p>Evolui para: CHARIZARD</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="006.png" alt="Imagem 5">
+                            <h3>CHARIZARD</h3>
+                            <p>Tipo: Fogo/Voador</p>
+                            <p>Mega Evolui para: Mega Charizard X ou Mega Charizard Y</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="007.png" alt="Imagem 5">
+                            <h3>SQUIRTLE</h3>
+                                <p>Tipo: Água</p>
+                                <p>Evolui para: WARTORTLE</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="008.png" alt="Imagem 5">
+                            <h3>WARTORTLE</h3>
+                                <p>Tipo: Água</p>
+                                <p>Evolui para: BLASTOISE</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="009.png" alt="Imagem 5">
+                            <h3>BLASTOISE</h3>
+                                <p>Tipo: Água</p>
+                                <p>Evolui de: WARTORTLE (Mega Blastoise)</p>
+                        </div>
+                    </div>
+                </div>
+                    <button class="prev" onclick="prevSlide()">❮</button>
+                    <button class="next" onclick="nextSlide()">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <br>
+
+    
+    <br>
+
+    <footer>
+        <p> Guilherme Lacerda - &copyTodos os direitos reservados <br> Trabalho acadêmico - sem fins lucrativos
+        </p>
+    </footer>
+
+    <script>
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll('.carousel-item');
+            if (slideIndex >= slides.length) {
+                 slideIndex = 0 
+            }
+
+            if (slideIndex < 0) { 
+                slideIndex = slides.length - 1 
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            slides[slideIndex].style.display = "block";
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlides();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlides();
+        }
+
+
+    </script>
+</body>
+
+</html>

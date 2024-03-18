@@ -1,0 +1,180 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8f0303;
+            color: #333;
+        }
+        header {
+            background-color: rgb(255, 38, 0);
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 3px 20px;
+            transition: background-color 0.3s ease;
+            transition: border-radius 0.3s ease;
+        }
+        nav a:hover {
+          border-radius: 50% ;
+          border-bottom: 3px solid rgb(255, 255, 255);
+          color: #ffffff; /* Cor alterada ao passar o mouse */
+          border-radius: 20px;
+        }
+        nav a.ativa {
+            border-bottom: 3px solid #ff4c15;
+        }
+
+        .features {
+            display:flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .feature {
+            flex: 0 0 calc(33.33% - 20px);
+            background-color: #f84d4d;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .feature h2 {
+          font-family:Arial, Helvetica, sans-serif  
+          font-size: 50px;
+            color: white;
+            text-align: center;
+        }
+        
+        .feature p {
+            font-size: 16px;
+            color: #444;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 4px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            background-color: rgb(0, 0, 0), 60, 0);
+            color: black
+            text-decoration: none;
+            text-align: center;
+          }
+      
+          .btn:hover {
+            background-color: rgb(255, 0, 0)
+          }      
+
+
+        footer {
+ 
+          background-color: rgb(255, 0, 0);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            bottom: 0;
+            
+        }
+      
+      .textbox {
+          margin-top: 10px;
+          text-align: center;
+          font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 
+      }
+       
+
+       
+
+        /* responsividade pq vai q né */
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 5px;
+            }
+            .product {
+                width: 90%;
+            }
+        }
+
+        .carousel {
+            width: 300px;
+            overflow: hidden;
+            margin: 0 auto;
+          }
+        
+          .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease;
+          }
+        
+          .carousel-item {
+            width: 300px;
+            flex: 0 0 auto;
+          }
+        
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        
+          .prev, .next {
+            cursor: pointer;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgb(255, 0, 0);
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border: none;
+            outline: none;
+          }
+        
+          .prev {
+            left: 0px;
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 4px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: all 0.9s ease;
+            background-color: rgb(255, 0, 0), 67, 67);
+            text-decoration: none;
+            text-align: center;
+          }
+        
+          .next {
+            right: -225px;
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 4px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: all 0.9s ease;
+            background-color: rgb(255, 0, 0), 60, 0);
+            text-decoration: none;
+            text-align: center;
+          }
